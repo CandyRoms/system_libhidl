@@ -19,7 +19,7 @@ cc_library {
         enabled: true,
         support_system_process: true,
     },
-    cflags: libhidl_flags,
+    defaults: ["libhidl-defaults"],
     shared_libs: [
         "libbase",
         "libcutils",
@@ -33,7 +33,6 @@ cc_library {
     local_include_dirs: ["include"],
     export_include_dirs: ["include"],
 
-    clang: true,
     sanitize: {
         misc_undefined: ["integer"],
     },
